@@ -3,3 +3,32 @@
 body {
   font-family: Poppins, sans-serif;
 }
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 12px;
+  background: #ffc625;
+  border-radius: 4px;
+  color: #000;
+  text-transform: capitalize;
+  &:hover,
+  &:focus {
+    background: #c69614;
+  }
+  &:disabled,
+  &[disabled] {
+    background: grey;
+    cursor: default;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
